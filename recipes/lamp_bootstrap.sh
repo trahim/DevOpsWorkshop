@@ -25,5 +25,7 @@ git clone https://github.com/Bgroves93/DevOpsWorkshop.git
 cp -R DevOpsWorkshop/wordpress /var/www/html
 cd DevOpsWorkshop/wordpress
 mysql < wordpress_db.sql
-
+#Tom cat installation
+yum -y install tomcat6 tomcat6-webapps tomcat6-admin-webapps
+service tomcat6 start
 
