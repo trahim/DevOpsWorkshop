@@ -25,5 +25,3 @@ git clone https://github.com/Bgroves93/DevOpsWorkshop.git
 cp -R DevOpsWorkshop/wordpress /var/www/html
 cd DevOpsWorkshop/wordpress
 mysql < wordpress_db.sql
-
-
