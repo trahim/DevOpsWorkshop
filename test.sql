@@ -1,3 +1,9 @@
+-- MySQL dump 10.13  Distrib 5.5.40, for Linux (x86_64)
+--
+-- Host: localhost    Database: wordpress-db
+-- ------------------------------------------------------
+-- Server version	5.5.40
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -8,14 +14,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Database: `wordpress-db`
---
-CREATE DATABASE IF NOT EXISTS `wordpress-db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `wordpress-db`;
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `wp_commentmeta`
@@ -380,5 +378,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-29  9:39:06
-
+-- Dump completed on 2014-10-29 16:39:51

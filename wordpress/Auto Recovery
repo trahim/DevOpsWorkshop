@@ -1,0 +1,14 @@
+sudo yum update
+#created a artical text just as a test
+touch text.txt
+#checked the text was there
+ls 
+#I then configured the AWS with secruity keys 
+sudo aws configure 
+access key id = <.......>
+secret key access = <.......>
+Default region name = < NO SPECIFIC REGION>
+Default output format = < NO SPECIFIC FORMAT>
+sudo aws cp s3 text.txt s3://webtcrotch/text.txt
+#go into the bucket check the file copied over
+#The problem I was having was due to AWS Configure, I wasnt 'SUDOing' configure and due to the instances haviung group it wasn't able to access the credentials, it needed to be a root to configure the AWS.
