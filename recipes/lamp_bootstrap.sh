@@ -42,3 +42,4 @@ cd ~
 git clone https://bitbucket.org/kizzie/webservices.git
 cd webservices/SimpleWebApplication
 mvn package
+cp target/SimpleWebApplication-0.0.1-SNAPSHOT.war /usr/share/tomcat7/webapps
