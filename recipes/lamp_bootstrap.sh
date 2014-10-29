@@ -1,6 +1,6 @@
 #!/bin/sh
 #Apache, PHP and MySQL install script
-yum -y install httpd php mysql php-mysql mysql-server git
+yum -y install httpd php mysql php-mysql mysql-server git java-devel
 #turning on services
 chkconfig httpd on
 /etc/init.d/httpd start
@@ -28,18 +28,17 @@ mysql < wordpress_db.sql
 #Tom cat installation
 yum -y install tomcat7 tomcat7-webapps tomcat7-admin-webapps
 service tomcat7 start
-#Download maven
-mkdir /usr/local/apache-maven
-cd /usr/local/apache-maven
-wget http://www.mirrorservice.org/sites/ftp.apache.org/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-tar zxvf apache-maven-3.2.3-bin.tar.gz
-M2_HOME=/usr/local/apache-maven/apache-maven-3.2.3/
-export M2=$M2_HOME/bin
-export PATH=$M2:$PATH
-#Download java sdk
-yum install java-1.7.0-openjdk-devel
+#Download maven rpm
+cd ~
+wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-6/x86_64/apache-maven-3.2.1-2.el6.noarch.rpm
+rpm -ivh apache-maven-3.2.1-2.el6.noarch.rpm
 cd ~
 git clone https://bitbucket.org/kizzie/webservices.git
 cd webservices/SimpleWebApplication
 mvn package
 cp target/SimpleWebApplication-0.0.1-SNAPSHOT.war /usr/share/tomcat7/webapps
+cd ~
+git clone https://github.com/kizzie/SpringForms.git
+cd SpringForms/
+mvn package
+cp target/SpringForms-1.0.0-BUILD-SNAPSHOT.war /usr/share/tomcat7/webapps/
