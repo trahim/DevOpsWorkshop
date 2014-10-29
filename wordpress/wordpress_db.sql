@@ -10,10 +10,10 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Database: `wordpresstestdb`
+-- Database: `wordpress-db`
 --
-CREATE DATABASE IF NOT EXISTS `wordpresstestdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `wordpresstestdb`;
+CREATE DATABASE IF NOT EXISTS `wordpress-db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `wordpress-db`;
 
 -- --------------------------------------------------------
 
