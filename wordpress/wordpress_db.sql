@@ -12,7 +12,6 @@
 --
 -- Database: `wordpress-db`
 --
-CREATE DATABASE IF NOT EXISTS `wordpress-db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `wordpress-db`;
 
 -- --------------------------------------------------------
