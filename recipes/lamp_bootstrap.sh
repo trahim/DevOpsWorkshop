@@ -1,5 +1,6 @@
 #!/bin/sh
 #Apache, PHP and MySQL install script
+yum update
 yum -y install httpd php mysql php-mysql mysql-server git java-devel
 #turning on services
 chkconfig httpd on
