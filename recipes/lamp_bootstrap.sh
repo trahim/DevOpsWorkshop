@@ -31,6 +31,8 @@ mysql < wordpress_db.sql
 cd /repo/DevOpsWorkshop
 chmod 777 backup_script.sh
 crontab -u ec2-user cron_file
+cat httpd_footer >> /etc/httpd/conf/httpd.conf
+service httpd restart
 #Tom cat installation
 yum -y install tomcat7 tomcat7-webapps tomcat7-admin-webapps
 service tomcat7 start
