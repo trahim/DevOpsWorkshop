@@ -20,12 +20,17 @@ cp -R * /var/www/html/angus
 cd /var/www/html/angus
 mysql < animal.sql
 #cloning git repo
-cd ~
+mkdir /repo
+cd /repo
 git clone https://github.com/Bgroves93/DevOpsWorkshop.git
 #move wordpress to public html
 cp -R DevOpsWorkshop/wordpress /var/www/html
 cd DevOpsWorkshop/wordpress
 mysql < wordpress_db.sql
+#backup script installation
+cd /repo/DevOpsWorkshop
+chmod 777 backup_script.sh
+crontab -u ec2-user cron_file
 #Tom cat installation
 yum -y install tomcat7 tomcat7-webapps tomcat7-admin-webapps
 service tomcat7 start
