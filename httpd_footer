@@ -1,0 +1,9 @@
+<VirtualHost *:80>
+ServerName http://ec2-54-68-235-46.us-west-2.compute.amazonaws.com
+ServerAlias ec2-54-68-235-46.us-west-2.compute.amazonaws.com
+ProxyRequests Off
+ProxyPreserveHost On
+
+ProxyPass /SpringForms-1.0.0-BUILD-SNAPSHOT http://ec2-54-68-235-46.us-west-2.compute.amazonaws.com:8080/SpringForms-1.0.0-BUILD-SNAPSHOT
+ProxyPassReverse /SpringForms-1.0.0-BUILD-SNAPSHOT http://ec2-54-68-235-46.us-west-2.compute.amazonaws.com:8080/SpringForms-1.0.0-BUILD-SNAPSHOT
+</VirtualHost>
